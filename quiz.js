@@ -1,4 +1,7 @@
-const quizContainer =  document.getElementById("quiz");
+const quizContainer =  document.getElementById('quiz');
+const submitButton = document.getElementById('submitBtn');
+const scoreDisplay = document.getElementById('score');
+let score = 0;
 
 function displayQuiz()
 {
@@ -13,22 +16,46 @@ function displayQuiz()
                 ${option}
                 </label>
             `).join('')}
-        <div>`;
+            <p class="feedback" style="display: none;"></p>
+        </div>`;
     });
     quizContainer.innerHTML = output;
 }
 
 function submitQuiz()
 {
-    let score = 0;
-    questions.forEach((question, index) => {
-        const selectedOption = document.querySelector(`input[name=question${index}]:checked`);
-        if(selectedOption.value === question.answer)
+    let correctAnswers = 0;
+    const answerContainers = quizContainer.querySelectorAll('div');
+
+    answerContainers.forEach(answerContainer => {
+        const selectedOption = answerContainer.querySelector('input[type=radio]:checked');
+        const feedback = answerContainer.querySelector('.feedback');
+        feedback.style.display = 'block';
+        if(selectedOption)
         {
-            score++;
+            const questionIndex = parseInt(selectedOption.name.replace('question', ''))
+            if(selectedOption.value === questions[questionIndex].answer)
+            {
+                correctAnswers++;
+                feedback.textContent = 'Correct!';
+                feedback.classList.add('correct-answer');
+            }
+            else
+            {
+                feedback.textContent = 'Incorrect!';
+                feedback.classList.add('incorrect-answer');
+            }
+        }
+        else
+        {
+            feedback.textContent = 'You didn\'t answer this question.';
+            feedback.classList.add('unanswered');
         }
     });
-    alert(`Your score: ${score}/${questions.length}`);
+    score = correctAnswers;
+    console.log(score);
+    scoreDisplay.textContent = `Your score: ${score}/${questions.length}`;
+    scoreDisplay.style.display = 'block';
 }
 
 displayQuiz();

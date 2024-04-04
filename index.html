@@ -10,9 +10,10 @@
         <div class="container">
             <h1>Space Symposium Quiz</h1>
             <div id="quiz"></div>
-            <button onclick="submitQuiz()">Submit Quiz</button>
+            <button id="submitBtn" onclick="submitQuiz()">Submit Quiz</button>
+            <div id="score" style="display: none;"></div>
         </div>
-        <script src="questions.js"></script>
-        <script src="quiz.js"></script>
+        <script src="questions.js" defer></script>
+        <script src="quiz.js" defer></script>
     </body>
 </html>
