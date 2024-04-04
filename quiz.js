@@ -51,6 +51,13 @@ function submitQuiz()
             feedback.textContent = 'You didn\'t answer this question.';
             feedback.classList.add('unanswered');
         }
+        // Disable radio inputs except the selected one
+        const radioInputs = answerContainer.querySelectorAll('input[type=radio]:not(:checked)');
+        radioInputs.forEach(input => {
+            input.disabled = true;
+        });
+        // Disable submit button
+        submitButton.disabled = true;
     });
     score = correctAnswers;
     console.log(score);
