@@ -59,6 +59,7 @@ function submitAnswers()
         // Disable submit button
         submitButton.disabled = true;
     });
+    
     score = correctAnswers;
     console.log(score);
     scoreDisplay.textContent = `Your score: ${score}/${questions.length}`;
