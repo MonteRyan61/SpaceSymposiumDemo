@@ -26,3 +26,26 @@ button
     font-size: 16px;
     cursor: pointer;
 }
+
+.question-container
+{
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.question-container
+{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.options-container
+{
+    font-size: 16px;
+    padding-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: left;
+}

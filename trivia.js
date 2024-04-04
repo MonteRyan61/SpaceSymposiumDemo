@@ -8,13 +8,13 @@ function displayQuestions()
     let output = '';
     questions.forEach((question, index) => {
         output += 
-        `<div>
-            <p>${index + 1}. ${question.question}</p>
+        `<div class="question-container">
+            <div class="question">${index + 1}. ${question.question}</div>
             ${question.options.map(option => `
-                <label>
+                <div class="options-container">
                     <input type="radio" name="question${index}" value="${option}">
-                ${option}
-                </label>
+                    ${option}
+                </div>
             `).join('')}
             <p class="feedback" style="display: none;"></p>
         </div>`;
