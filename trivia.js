@@ -1,9 +1,9 @@
-const quizContainer =  document.getElementById('quiz');
+const triviaContainer =  document.getElementById('trivia');
 const submitButton = document.getElementById('submitBtn');
 const scoreDisplay = document.getElementById('score');
 let score = 0;
 
-function displayQuiz()
+function displayQuestions()
 {
     let output = '';
     questions.forEach((question, index) => {
@@ -19,13 +19,13 @@ function displayQuiz()
             <p class="feedback" style="display: none;"></p>
         </div>`;
     });
-    quizContainer.innerHTML = output;
+    triviaContainer.innerHTML = output;
 }
 
-function submitQuiz()
+function submitAnswers()
 {
     let correctAnswers = 0;
-    const answerContainers = quizContainer.querySelectorAll('div');
+    const answerContainers = triviaContainer.querySelectorAll('div');
 
     answerContainers.forEach(answerContainer => {
         const selectedOption = answerContainer.querySelector('input[type=radio]:checked');
@@ -65,4 +65,4 @@ function submitQuiz()
     scoreDisplay.style.display = 'block';
 }
 
-displayQuiz();
+displayQuestions();
