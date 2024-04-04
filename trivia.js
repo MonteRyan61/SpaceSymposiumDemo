@@ -25,7 +25,7 @@ function displayQuestions()
 function submitAnswers()
 {
     let correctAnswers = 0;
-    const answerContainers = triviaContainer.querySelectorAll('div');
+    const answerContainers = triviaContainer.querySelectorAll('.question-container');
 
     answerContainers.forEach(answerContainer => {
         const selectedOption = answerContainer.querySelector('input[type=radio]:checked');
