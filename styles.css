@@ -1,50 +1,65 @@
 body
 {
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
+    background-color: #000000;
+    background-image: radial-gradient(#002A52, #000000);
     font-family: Arial, sans-serif;
 }
 
 .trivia-container
 {
     max-width: 600px;
-    margin: auto;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff;
+    text-align: center;
+
+    /* question styling */
+    background-color: rgba(228, 222, 222, 0.1);  /*semi-transparent white background for contrast */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    text-align: center;
-    padding-top: 20px;
 }
 
 h1
 {
     font-size: 32px;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
 button
 {
     margin-top: 20px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 22px;
     cursor: pointer;
 }
 
 .question-container
 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+
+    /* question styling */
+    background-color: rgba(95, 77, 77, 0.548);  /*semi-transparent white background for contrast */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+    /* text */
+    color: #ffffff;
+    font-size: 20px;
+    text-align: left;
 }
 
-.question-container
+.question-container-correct
 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    text-align: left;
+    background-color: rgba(7, 170, 34, 0.548);
+}
+
+.question-container-incorrect
+{
+    background-color: rgba(170, 7, 7, 0.548);
 }
 
 .options-container
@@ -59,24 +74,15 @@ button
 .feedback
 {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 18px;
     text-align: center;
 }
 
-.score
+#score
 {
-    text-align: center;
-}
-
-.correct-answer
-{
-    color: green;
-}
-
-.incorrect-answer, 
-.unanswered
-{
-    color: red;
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 18px;
 }
 
 .links

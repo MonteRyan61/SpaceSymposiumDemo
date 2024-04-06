@@ -26,11 +26,11 @@ function displayQuestions()
 function submitAnswers()
 {
     let correctAnswers = 0;
-    const answerContainers = triviaContainer.querySelectorAll('.question-container');
+    const questionContainers = triviaContainer.querySelectorAll('.question-container');
 
-    answerContainers.forEach(answerContainer => {
-        const selectedOption = answerContainer.querySelector('input[type=radio]:checked');
-        const feedback = answerContainer.querySelector('.feedback');
+    questionContainers.forEach(questionContainer => {
+        const selectedOption = questionContainer.querySelector('input[type=radio]:checked');
+        const feedback = questionContainer.querySelector('.feedback');
         feedback.classList.remove('hidden');
         if(selectedOption)
         {
@@ -39,21 +39,21 @@ function submitAnswers()
             {
                 correctAnswers++;
                 feedback.textContent = 'Correct!';
-                feedback.classList.add('correct-answer');
+                questionContainer.classList.add('question-container-correct');
             }
             else
             {
                 feedback.textContent = 'Incorrect!';
-                feedback.classList.add('incorrect-answer');
+                questionContainer.classList.add('question-container-incorrect');
             }
         }
         else
         {
             feedback.textContent = 'You didn\'t answer this question.';
-            feedback.classList.add('unanswered');
+            questionContainer.classList.add('question-container-incorrect');
         }
         // Disable radio inputs except the selected one
-        const radioInputs = answerContainer.querySelectorAll('input[type=radio]:not(:checked)');
+        const radioInputs = questionContainer.querySelectorAll('input[type=radio]:not(:checked)');
         radioInputs.forEach(input => {
             input.disabled = true;
         });
@@ -69,19 +69,26 @@ function submitAnswers()
 
 function retryTrivia()
 {
-    const answerContainers = triviaContainer.querySelectorAll('.question-container');
-    answerContainers.forEach(answerContainer => {
-        const feedback = answerContainer.querySelector('.feedback');
+    const questionContainers = triviaContainer.querySelectorAll('.question-container');
+    questionContainers.forEach(questionContainer => {
+        const feedback = questionContainer.querySelector('.feedback');
         feedback.classList.add('hidden'); // Hide the feedback
         feedback.textContent = ''; // Clear the feeback
 
-        const radioInputs = answerContainer.querySelectorAll('input[type=radio]');
+        const radioInputs = questionContainer.querySelectorAll('input[type=radio]');
         radioInputs.forEach(input=>{
                 input.checked = false; // Clear answers
                 input.disabled = false; // Enable input selection
             });
+        if(questionContainer.classList.contains('question-container-correct'))
+        {
+            questionContainer.classList.remove('question-container-correct'); //reset question container background style
+        }
+        else
+        {
+            questionContainer.classList.remove('question-container-incorrect'); //reset question container background style
+        }
     });
-    
 
     submitButton.classList.remove('hidden'); // Show the submit button
     scoreDisplay.classList.add('hidden'); // Hide the previous score
