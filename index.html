@@ -10,8 +10,11 @@
         <div class="trivia-container">
             <h1>Space Symposium Trivia</h1>
             <div id="trivia"></div>
-            <button id="submitBtn" onclick="submitAnswers()">Submit</button>
-            <div id="score" style="display: none;"></div>
+            <div class="hidden" id="score"></div>
+            <div class="button-container">
+                <button id="submitBtn" onclick="submitAnswers()">Submit</button>
+                <button class="hidden" id="retryBtn" onclick="retryTrivia()">Retry</button>
+            </div>
         </div>
         <script src="questions.js" defer></script>
         <script src="trivia.js" defer></script>

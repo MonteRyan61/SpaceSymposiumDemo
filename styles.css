@@ -61,13 +61,11 @@ button
     margin-top: 10px;
     font-size: 14px;
     text-align: center;
-    display: none; /* Initially hide the feedback until submitted */
 }
 
 .score
 {
     text-align: center;
-    display: none; /* Initially hide the score until submitted */
 }
 
 .correct-answer
@@ -103,6 +101,12 @@ button
 .links a:hover
 {
     background-color: #2980b9;
+}
+
+/* class used to hide elements */
+.hidden
+{
+    display: none !important; 
 }
 
 @media screen and (max-width: 600px)
