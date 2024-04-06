@@ -16,7 +16,7 @@ function displayQuestions()
                     ${option}
                 </div>
             `).join('')}
-            <p class="feedback" style="display: none;"></p>
+            <div class="feedback"></div>
         </div>`;
     });
     triviaContainer.innerHTML = output;
