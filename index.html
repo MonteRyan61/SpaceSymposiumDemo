@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Space Symposium Trivia</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="trivia-container">
-            <h1>Space Symposium Trivia</h1>
-            <div id="trivia"></div>
-            <div class="hidden" id="score"></div>
-            <div class="button-container">
-                <button id="submitBtn" onclick="submitAnswers()">Submit</button>
-                <button class="hidden" id="retryBtn" onclick="retryTrivia()">Retry</button>
-            </div>
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport settings for responsive design -->
+    <title>Space Symposium Trivia</title>
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main container for trivia -->
+    <div class="trivia-container">
+        <h1>Space Symposium Trivia</h1>
+        <!-- Trivia questions will be displayed here -->
+        <div id="trivia"></div>
+        <!-- Score display (initially hidden) -->
+        <div class="hidden" id="score"></div>
+        <!-- Buttons for submitting answers and retrying -->
+        <div class="button-container">
+            <button id="submitBtn" onclick="submitAnswers()">Submit</button>
+            <button class="hidden" id="retryBtn" onclick="retryTrivia()">Retry</button>
         </div>
-        <script src="questions.js" defer></script>
-        <script src="trivia.js" defer></script>
-    </body>
+    </div>
+    <!-- Linking to an external JavaScript file for questions -->
+    <script src="questions.js" defer></script>
+    <!-- Linking to an external JavaScript file for trivia functionality -->
+    <script src="trivia.js" defer></script>
+    <!-- Footer with links -->
     <footer>
+        <!-- Links to view source code and visit a website -->
         <div class="links">
             <a href="https://github.com/MonteRyan61/SpaceSymposiumDemo" target="_blank" rel="noopener noreferrer">View Source Code</a>
             <a href="https://www.kratosdefense.com/technologies" target="_blank" rel="noopener noreferrer">Visit Kratos Website</a>
         </div>
     </footer>
+</body>
 </html>

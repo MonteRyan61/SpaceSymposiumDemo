@@ -1,69 +1,60 @@
-body
-{
+body {
     background-color: #000000;
     background-image: radial-gradient(#002A52, #000000);
     font-family: Arial, sans-serif;
 }
 
-.trivia-container
-{
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+/* Styling for the main trivia container */
+.trivia-container {
+    max-width: 600px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Padding around the container */
+    text-align: center; /* Center-align text inside the container */
 
-    /* question styling */
-    background-color: rgba(228, 222, 222, 0.1);  /*semi-transparent white background for contrast */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    /* Question container styling */
+    background-color: rgba(228, 222, 222, 0.1); /* Semi-transparent white background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Box shadow for depth */
 }
 
-h1
-{
+h1 {
     font-size: 32px;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #ffffff; /* Text color */
 }
 
-button
-{
+button {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 22px;
-    cursor: pointer;
+    cursor: pointer; /* Cursor style on hover*/
 }
 
-.question-container
-{
+.question-container {
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 5px; /* Rounded corners */
 
-    /* question styling */
-    background-color: rgba(95, 77, 77, 0.548);  /*semi-transparent white background for contrast */
+    background-color: rgba(95, 77, 77, 0.548); /* Semi-transparent background for contrast */
     border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Box shadow for depth */
 
-    /* text */
-    color: #ffffff;
+    color: #ffffff; /* Text color */
     font-size: 20px;
     text-align: left;
 }
 
-.question-container-correct
-{
-    background-color: rgba(7, 170, 34, 0.548);
+.question-container-correct {
+    background-color: rgba(7, 170, 34, 0.548); /* Semi-transparent background for correct answers */
 }
 
-.question-container-incorrect
-{
-    background-color: rgba(170, 7, 7, 0.548);
+.question-container-incorrect {
+    background-color: rgba(170, 7, 7, 0.548); /* Semi-transparent background for incorrect answers */
 }
 
-.options-container
-{
+.options-container {
     font-size: 14px;
     padding-left: 20px;
     margin-top: 5px;
@@ -71,55 +62,48 @@ button
     text-align: left;
 }
 
-.feedback
-{
+.feedback {
     margin-top: 10px;
     font-size: 18px;
     text-align: center;
 }
 
-#score
-{
+#score {
     margin-top: 20px;
-    color: #ffffff;
+    color: #ffffff; /* Text color */
     font-size: 18px;
 }
 
-.links
-{
+.links {
     margin-top: 20px;
     text-align: center;
 }
 
 .links a,
-.links a:visited
-{
+.links a:visited {
     display: inline-block;
     margin: 0 10px;
     padding: 10px 20px;
     background-color: #221c5a;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    color: #ffffff; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* smooth background color transition */
 }
 
-.links a:hover
-{
-    background-color: #2980b9;
+.links a:hover {
+    background-color: #2980b9; /* Background color on hover */
 }
 
-/* class used to hide elements */
-.hidden
-{
-    display: none !important; 
+/* Class used to hide elements */
+.hidden {
+    display: none !important; /* Hide elements */
 }
 
-@media screen and (max-width: 600px)
-{
-    .links a
-    {
-        display: block;
-        margin: 10px auto;
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+    .links a {
+        display: block; /* Display as block element */
+        margin: 10px auto; /* Margin for center alignment */
     }
 }
