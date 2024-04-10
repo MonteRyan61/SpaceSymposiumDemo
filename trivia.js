@@ -14,7 +14,10 @@ function displayQuestions() {
         // Build HTML for each question
         output += 
         `<div class="question-container">
-            <div class="question">${index + 1}. ${question.question}</div>
+            <div class="question-header">
+                <div class="question-number">${index + 1}.</div>
+                <div class="question-text">${question.question}</div>
+            </div>
             ${question.options.map(option => `
                 <div class="options-container">
                     <input type="radio" class="radio-input" name="question${index}" value="${option}">

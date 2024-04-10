@@ -15,18 +15,18 @@ body {
     background-color: rgba(228, 222, 222, 0.1); /* Semi-transparent white background for contrast */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Box shadow for depth */
+
+    color: #ffffff; /* Text color */
 }
 
 h1 {
     font-size: 32px;
-    margin-bottom: 5px;
-    color: #ffffff; /* Text color */
+    margin-bottom: 2px;
 }
 
 h2 {
     font-size: 25px;
-    margin-top: 5px;
-    color: #ffffff; /* Text color */
+    margin-top: 2px;
 }
 
 button {
@@ -46,10 +46,6 @@ button {
     border: 1px solid #ccc;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Box shadow for depth */
-
-    color: #ffffff; /* Text color */
-    font-size: 20px;
-    text-align: left;
 }
 
 .question-container-correct {
@@ -60,10 +56,22 @@ button {
     background-color: rgba(170, 7, 7, 0.548); /* Semi-transparent background for incorrect answers */
 }
 
+.question-header
+{
+    display:flex;
+
+    font-size: 20px;
+    text-align: left;
+}
+
+.question-number
+{
+    margin-right: 5px;
+}
+
 .options-container {
     display:flex;
     align-items: flex-start;
-
     font-size: 14px;
     padding-left: 20px;
     margin-top: 10px;
@@ -78,13 +86,12 @@ button {
 
 .feedback {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
 }
 
 #score {
     margin-top: 20px;
-    color: #ffffff; /* Text color */
     font-size: 18px;
 }
 
