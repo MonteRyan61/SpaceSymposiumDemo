@@ -19,7 +19,13 @@ body {
 
 h1 {
     font-size: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    color: #ffffff; /* Text color */
+}
+
+h2 {
+    font-size: 25px;
+    margin-top: 5px;
     color: #ffffff; /* Text color */
 }
 
