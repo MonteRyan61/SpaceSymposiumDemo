@@ -29,5 +29,45 @@ var questions = [
             "Low Earth orbit",
         ],
         answer: "Geostationary orbit"
+    },
+    {
+        question: "Which parameter determines the bandwidth of a signal in RF communication?",
+        options: [
+            "Frequency range", 
+            "Signal strength", 
+            "Data rate",
+            "Phase offset",
+        ],
+        answer: "Frequency range"
+    },
+    {
+        question: "What is the purpose of a parabolic dish antenna in satellite communication?",
+        options: [
+            "To amplify the received signal", 
+            "To focus the transmitted signal", 
+            "To block interference from other satellites",
+            "To encode data for transmission",
+        ],
+        answer: "To focus the transmitted signal"
+    },
+    {
+        question: "What is the minimum number of satellites required for GPS receivers to determine a user's position?",
+        options: [
+            "2", 
+            "3", 
+            "4",
+            "5",
+        ],
+        answer: "4"
+    },
+    {
+        question: "What is the purpose of Kratos OpenSpace?",
+        options: [
+            "To provide secure communication for military satellites", 
+            "To offer cloud-based satellite management solutions", 
+            "To develop advanced satellite propulsion systems",
+            "To improve satellite imaging technology",
+        ],
+        answer: "To offer cloud-based satellite management solutions"
     }
 ];
