@@ -71,7 +71,6 @@ button {
 
 .options-container {
     display:flex;
-    align-items: flex-start;
     font-size: 14px;
     padding-left: 20px;
     margin-top: 10px;
@@ -80,8 +79,9 @@ button {
 }
 
 .radio-input{
+    padding: 0;
+    margin: 0px 10px 0px 0px; /*Margin: top right bottom left */
     margin-right: 10px;
-    align-self: flex-start;
 }
 
 .feedback {
