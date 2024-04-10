@@ -17,7 +17,7 @@ function displayQuestions() {
             <div class="question">${index + 1}. ${question.question}</div>
             ${question.options.map(option => `
                 <div class="options-container">
-                    <input type="radio" name="question${index}" value="${option}">
+                    <input type="radio" class="radio-input" name="question${index}" value="${option}">
                     ${option}
                 </div>
             `).join('')}

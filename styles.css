@@ -61,11 +61,19 @@ button {
 }
 
 .options-container {
+    display:flex;
+    align-items: flex-start;
+
     font-size: 14px;
     padding-left: 20px;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 5px;
     text-align: left;
+}
+
+.radio-input{
+    margin-right: 10px;
+    align-self: flex-start;
 }
 
 .feedback {
